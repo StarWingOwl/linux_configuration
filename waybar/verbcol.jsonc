@@ -5,34 +5,21 @@
   "height": 32, // Waybar height (to be removed for auto height)
   "width": 2500, // Waybar width
   "spacing": 6, // Gaps between modules (4px)
+  "margin-top": -4,
+  "margin-bottom": -7,
   "modules-left": [
-    "hyprland/workspaces",
-    "custom/separator",
-    // "disk",
-    // "custom/separator",
-    "cpu",
-    "temperature",
-    "custom/separator",
-    "memory",
-    //"custom/pacman",
-    "custom/separator"
+    "niri/workspaces",
+    "group/cpu",
+    "memory"
   ],
   "modules-center": [
-    "custom/separator",
     "clock",
-    "custom/separator"
-    //"custom/weather"
+    "custom/weather"
   ],
   "modules-right": [
-    "custom/separator",
     "battery",
-    "custom/separator",
-    "pulseaudio#microphone",
-    "pulseaudio",
-    "backlight",
-    "custom/separator",
+    "group/hw",
     "network",
-    "custom/separator",
     "group/music"
   ],
   "custom/separator": {
@@ -40,7 +27,7 @@
     "interval": "once",
     "tooltip": false
   },
-  "hyprland/window": {
+  "niri/window": {
     "format": "{}",
     "max-length": 20,
     "tooltip": true,
@@ -49,7 +36,7 @@
   "clock": {
     // "timezone": "America/New_York",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": " {:%A, %d %B %H:%M}"
+    "format": " {:%A, %d %B %H:%M}",
   },
   "cpu": {
     "format": " {usage}%",
@@ -156,13 +143,28 @@
   },
   "custom/spotify": {
     "max-length": 25,
-    "exec": "~/.config/waybar/spotify.sh",
+    "exec": "~/.local/bin/spotify.sh",
     "interval": 5,
     "on-click": "playerctl next",
     "on-click-right": "playerctl previous",
     "on-click-middle": "playerctl -p spotify play-pause",
     "on-scroll-up": "playerctl -p spotify volume 0.05+",
     "on-scroll-down": "playerctl -p spotify volume 0.05-"
+  },
+  "group/cpu": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "temperature"
+    ]
+  },
+  "group/hw": {
+    "orientation": "horizontal",
+    "modules": [
+      "pulseaudio#microphone",
+      "pulseaudio",
+      "backlight"
+    ]
   },
   "group/music": {
     "orientation": "horizontal",
@@ -171,5 +173,5 @@
       "custom/before",
       "custom/next"
     ]
-  }
+  },
 }

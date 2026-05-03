@@ -1,1 +1,206 @@
-/home/starwingowl/.config/waybar/style/[Dark] Wallust Obsidian Edge.css
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", monospace;
+    font-size: 15px;
+    border: none;
+    border-radius: 7;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #222436;
+    color: #65bcff;
+}
+
+tooltip {
+    background-color: #222436;
+    border: 1px solid #3a5456;
+    color: #c8d3f5;
+}
+
+tooltip label {
+    color: #c8d3f5;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 0 2px;
+}
+
+#custom-separator {
+    color: #4a6668;
+    padding: 0.5 0.5px;
+}
+
+#workspaces {
+    background: transparent;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #fca7ea; 
+    opacity: 0.75;
+    padding: 5 6px;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    box-shadow: none;
+    min-width: 0;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    color: #fca7ea;
+    box-shadow: none;
+}
+
+#workspaces button.empty {
+    color: #828bb8;
+}
+
+
+#workspaces button.active {
+    color: #fca7ea;
+    opacity: 1;
+    border-bottom: 2px solid #fca7ea;
+}
+
+#workspaces button.urgent {
+    color: #ff966c;
+    border-bottom: 2px solid #ff966c;
+}
+
+#workspaces button:focus {
+    box-shadow: none;
+    background: transparent;
+}
+
+#window {
+    color: #b4f9f8;
+    padding: 1 2.5px;
+}
+
+#clock {
+        /* color: #c8d4f5; */
+    color: #ffc777;
+    padding: 1 2.5px;
+}
+
+#cpu {
+    color: #ff996c;
+    padding: 1 2.5px;
+}
+
+#cpu label:first-child {
+    color: #ff966c;
+}
+
+#memory {
+    color: #c099ff;
+    padding: 1 2.5px;
+}
+
+#temperature {
+    color: #ff996c;
+    padding: 1 2.5px;
+}
+
+#temperature.critical {
+    color: #ff757f;
+}
+
+#disk {
+    color: #65bcff;
+    padding: 1 2.5px;
+}
+
+
+#backlight {
+    color: #82aaff;
+    padding: 1 2.5px;
+}
+
+#battery {
+    color: #c3e88f;
+    padding: 1 2.5px;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #c3e88d;           /* soft green when charging */
+}
+
+#battery.warning:not(.charging) {
+    color: #c3e88d;
+}
+
+#battery.critical:not(.charging) {
+    color: #ff966c;
+    animation: blink 0.5s step-end infinite alternate;
+}
+
+@keyframes blink {
+    to { color: transparent; }
+}
+
+#network {
+    color: #fca7ea;
+    padding: 1 2.5px;
+}
+
+#network.disconnected {
+    color: #ffc777;
+}
+
+#pulseaudio {
+    color: #82aaff;
+    padding: 1 2.5px;
+}
+
+#pulseaudio.muted {
+  padding: 1 2.5px;
+  color: #82aaff;
+}
+
+#pulseaudio.microphone {
+  padding: 1 2.5px;
+  color: #82aaff;
+}
+
+#pulseaudio.microphone#muted {
+  padding: 1 2.5px;
+  color: #ff757f
+}
+
+
+#custom-spotify {
+    color: #4fd6be;
+    padding: 1 2.5px;
+}
+
+#custom-weather {
+    color: #86e1fc;
+    padding: 1 2.5px;
+   }
+
+#custom-pacman {
+  color: #7aa2f7;
+  padding: 1 2.5px;
+}
+
+#custom-next {
+  color: #4fd6be;
+  padding: 1 2.5px;
+
+}
+
+#custom-before {
+  color: #4fd6be;
+  padding: 1 2.5px;
+
+}
+
+
+scrollbar {
+    background: transparent;
+}
