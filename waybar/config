@@ -25,7 +25,7 @@
   ],
   "modules-right": [
     "custom/separator",
-    "battery",
+    "tray",
     "custom/separator",
     "pulseaudio#microphone",
     "pulseaudio",
