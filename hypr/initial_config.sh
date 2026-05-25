@@ -54,6 +54,7 @@ OFFICIAL=(
   awww
   rofi
   nwg-displays
+  flameshot
 )
 
 AUR=(

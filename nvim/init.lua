@@ -1,5 +1,5 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+-- bootstrap sui.nvim, LazyVim and your plugins
+require("config.sui")
 -- next / previous buffer
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", { silent = true })
 vim.keymap.set("n", "<S-Tab>", ":bprev<CR>", { silent = true })
