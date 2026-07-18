@@ -1,8 +1,5 @@
--- bootstrap sui.nvim, LazyVim and your plugins
-require("config.sui")
--- next / previous buffer
-vim.keymap.set("n", "<Tab>", ":bnext<CR>", { silent = true })
-vim.keymap.set("n", "<S-Tab>", ":bprev<CR>", { silent = true })
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
 
 -- jump to buffer by position (1–9)
 for i = 1, 9 do
@@ -38,3 +35,7 @@ vim.keymap.set("n", "<F5>", function()
 end, { noremap = true, silent = true })
 
 vim.keymap.set("t", "<C-q>", [[<C-\><C-n>]])
+
+-- next / previous buffer
+-- vim.keymap.set("n", "<Tab>", ":bnext<CR>", { silent = true })
+-- vim.keymap.set("n", "<S-Tab>", ":bprev<CR>", { silent = true })
